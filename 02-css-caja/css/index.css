@@ -1,0 +1,92 @@
+
+
+
+
+
+/* @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css"); */
+
+/* reseteo de css */
+/* es sacar las reglas de css del navegador por default */
+
+/* selector global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;/* me da las medidas exactas de los elementos */
+}
+
+body {
+    background-image: url('https://i.blogs.es/fff4ca/pizzas/1366_2000.jpg');
+    background-repeat: repeat; /* default */
+    background-repeat: repeat-x;/* repite horizontal */
+    background-repeat: repeat-y;/* repite vertical */
+    background-repeat: no-repeat;/* no repipta la imagen */
+}
+
+.titulo{
+    margin-top: 100px;
+    margin-bottom: 150px;
+    margin-left: 90px;
+    margin-right: 60px;
+    background: rgb(192, 192, 239);
+    border-top: 2px solid black;
+    border-bottom: 5px dashed rgb(112, 39, 39);
+    border-right: 9px solid red;
+    border-left: 9px dashed rgb(99, 183, 43);
+    text-align: end;
+    text-align: center;
+}
+
+.modelo{
+    background: rgb(242, 181, 181);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-right: 150px;
+    padding-top: 60px;
+    padding-left: 100px;
+    padding-bottom: 80px;
+    /* float: left; */
+}
+
+.parrafo{
+    background: greenyellow;
+    font-size: 24px;
+    height: 200px;
+    width: 900px;
+    margin-left: 80px;
+    padding-top: 45px;
+    text-align: start;
+    text-align: left;
+    text-align: right;
+    text-align: center;
+    text-align: justify;
+}
+
+nav{
+    text-align: end;
+    font-size: 30px;
+}
+
+a{
+    text-decoration: none;
+    margin-left: 20px;
+    margin-right: 25px;
+    border-left: 3px solid black;
+    padding-left: 25px;
+}
+
+.seccion{
+    margin: 40px;
+    border: 5px dotted black;
+    padding: 30px;
+}
+
+.seccion p{
+    border: 4px double blue;
+}
+
+
+li{
+    font-size: 32px;
+}

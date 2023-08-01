@@ -1,0 +1,89 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: rgb(245, 189, 189);
+    height: 20px;
+}
+
+nav{
+    background: rgb(188, 188, 216);
+}
+
+.lateral{
+    display: flex;
+    justify-content: center;
+} 
+
+a{
+    text-decoration: none;
+}
+
+/* usamos Flexbox: apuntando al contenedor padre */
+.fila{
+   /*  display: none; */
+    display: flex;
+    flex-direction: row-reverse;
+    flex-direction: row;
+    justify-content: start;
+    justify-content: left;
+    justify-content: center;
+    justify-content: right;
+    justify-content: end;
+}
+
+.columna{
+    display: flex;
+    background: rgb(188, 230, 188);
+    flex-direction: column-reverse;
+    flex-direction: column;
+    width: 45%;
+    margin: 1%;
+}
+
+figure{
+    padding: 10px;
+}
+
+li{
+    margin: 15px;
+    list-style: none;
+    padding: 10px;
+    background-color: rgb(188, 230, 188);
+}
+/* Elementos que flotan a la izquierda para que se acomoden  */
+/* li{
+    list-style: none;
+    float: left;
+    margin: 25px;
+} */
+
+
+/* Fotter */
+
+.rrss-ul {
+    display: flex;
+    background-color: red;
+}
+
+button{
+    padding: 5px;
+    background: rgb(168, 168, 231);
+    margin: 10px;
+}
+
+div{
+    text-align: center;
+    padding: 10px;
+}
+
+p{
+    text-align: justify;
+}
+
+
+

@@ -1,0 +1,8 @@
+
+
+1. Crear un nuevo doc html.
+2. Utilizar títulos para nombres.
+3. Usar lista ordenadas o des... hobbies
+4. Dos p para comentar algo para hacer.
+5. Print de pantalla para subirlo al Dive.
+

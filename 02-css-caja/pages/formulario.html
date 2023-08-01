@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/formulario.css">
+    <title>Formularios</title>
+</head>
+<body>
+
+    <nav>
+        <a href="../index.html">home</a>
+    </nav>
+
+    <div class="titulo">
+        <h1>
+            Formulario de Registro de Productos
+        </h1>
+    </div>
+
+    <form action="">
+        <h2>Datos Personales</h2>
+
+        <div class="datosPersonales">
+            <label for="nombreProducto">
+                Nombre del Producto
+            </label>
+            <br>
+            <input 
+                type="text" 
+                id="nombreProducto" 
+                name="nombreProducto" 
+                placeholder="Nombre del producto..."
+                maxlength="20"
+                minlength="2"
+                required
+            >
+            <br>
+
+            <label for="precioProducto">Precio Producto</label>
+            <br>
+            <input 
+                type="number" 
+                id="precioProducto" 
+                name="precioProducto"
+                min="10"
+                max="100"
+                autofocus
+                autocomplete="on"
+                class="inputPrecio"
+            >
+            <br>
+            <label for="emailProveedor">Email Proveedor</label>
+            <br>
+            <input 
+                type="email"
+                id="emailProveedor"
+                name="emailProveedor"
+                placeholder="email@google.com"
+                pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
+                required
+            >
+            <br>
+            <label for="password">Password</label>
+            <br>
+            <input 
+                type="password"
+                minlength="8"
+                maxlength="20"
+                pattern="pattern="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,}$""
+            >
+            <br>
+            <label for="archivo">Imagen</label>
+            <br>
+            <input 
+                type="file"
+                id="archivo"
+                name="archivo"
+                accept="image/*"
+            >
+            <br>
+        </div>
+
+        <label for="comentarios">Comentarios</label>
+        <textarea 
+            name="comentarios" 
+            id="comentarios" 
+            cols="30" 
+            rows="10"
+        >
+        </textarea>
+        <br>
+        <label for="provincias">Selecciones una Provincia</label>
+        <select name="provincias" id="provincias">
+            <option value="CABA">CABA</option>
+            <option value="Buenos Aires" selected>Buenos Aires</option>
+            <option value="Salta">Salta</option>
+            <option value="San Juan">San Juan</option>
+            <option value="Salta">Salta</option>
+            <option value="San Juan">San Juan</option>
+            <option value="Salta">Salta</option>
+            <option value="San Juan">San Juan</option>
+            <option value="Salta">Salta</option>
+            <option value="San Juan">San Juan</option>
+        </select>
+        <br>
+        <label for="fechaNacimiento">Fecha de Nacimiento</label>
+        <br>
+        <input type="date" id="fechaNacimiento" name="fechaNacimiento">
+        <br>
+        <label for="genero">Genero</label>
+        <br>
+        <input type="radio" id="genero" name="genero" value="hombre"> Hombre
+        <input type="radio" id="genero" name="genero" value="mujer"> Mujer
+        <input type="radio" id="genero" name="genero" value="otro"> Otro
+        <br>
+        <hr>
+        <br>
+        <label for="deportes">Deportes</label>
+        <br>
+        <input type="checkbox" id="deportes" name="deportes" value="futbol"> Futbol
+        <input type="checkbox" id="deportes" name="deportes" value="volley"> Volley
+        <input type="checkbox" id="deportes" name="deportes" value="basquet"> Basquet
+        <input type="checkbox" id="deportes" name="deportes" value="futbol"> Futbol
+        <br>
+        <button type="submit">
+            Enviar Datos
+        </button>
+        <br>
+        <input type="submit" value="Envío Datos por un Input">
+        <br>
+        <button type="reset">Borrar Form con Botón</button>
+        <br>
+        <input type="reset" value="Borrar con Input">
+        <br>
+
+    </form>
+
+    <hr>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda sint consectetur illum sunt illo ab aut id officia. Odit cumque recusandae architecto illum nesciunt! Facilis itaque fuga officia magni voluptatum?
+        </p>
+    <hr>
+
+    <form action="">
+        <fieldset>
+            <legend>Sección Producto</legend>
+            <label 
+                for="nombreProducto">
+                Nombre del Producto
+            </label>
+            <br>
+            <input 
+                type="text" 
+                id="nombreProducto" 
+                name="nombreProducto" 
+                placeholder="Nombre del producto..."
+                maxlength="20"
+                minlength="2"
+                required
+            >
+            <br>
+        </fieldset>
+
+        <button type="submit">
+            Enviar Datos
+        </button>
+
+    </form>
+
+
+    
+</body>
+</html>

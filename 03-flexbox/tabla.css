@@ -1,0 +1,71 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 32px;
+}
+
+
+table{
+    width: 100%;
+    text-align: center;
+}
+
+td{
+    /* border: 1px solid black; */
+    padding: 5px;
+    background: rgb(205, 229, 240);
+}
+
+th {
+    background: rgb(193, 193, 226);
+}
+
+.horario{
+    background: rgb(230, 185, 185);
+}
+
+img{
+    width: 80px;
+    height: 80px;
+}
+
+/* responsivo */
+/*  X-Small devices (portrait phones, less than 576px)
+    No media query for `xs` since this is the default in Bootstrap
+
+ Small devices (landscape phones, 576px and up) */
+
+@media screen and (max-width: 576px) {/* asume los estilos hasta los 576 px */ 
+
+    
+    *{
+        font-size: 14px;
+    }
+
+    body{
+        background: red;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {/* este estilo inicia en 768 px */ 
+        
+    *{
+        font-size: 30pxpx;
+    }
+
+    body{
+        background: blue;
+    }
+}
+
+ /* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {  }
+
+ /* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {  }
+
+ /* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {  }

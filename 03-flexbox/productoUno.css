@@ -1,0 +1,47 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: rgb(245, 189, 189);
+    height: 20px;
+}
+
+nav{
+    background: rgb(188, 188, 216);
+}
+
+a{
+    text-decoration: none;
+}
+
+.fila{
+    /*  display: none; */
+    display: flex;
+    flex-direction: row-reverse;
+    flex-direction: row;
+    justify-content: start;
+    justify-content: left;
+    justify-content: center;
+    justify-content: right;
+    justify-content: end;
+}
+
+li{
+    margin: 15px;
+    list-style: none;
+    padding: 10px;
+    background-color: rgb(188, 230, 188);
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    color: green; 
+    font-size: 25px;
+    /* Damian. */
+}

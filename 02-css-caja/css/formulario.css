@@ -1,0 +1,29 @@
+
+
+.titulo{
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 60px;
+    text-transform: lowercase;/* palabras en minúsculas */
+    text-transform: capitalize;/* primer letra de la palabra en may */
+}
+
+/* Aquì iniciamos los estilos del Nav */
+nav{
+    font-size: 30px;
+    text-align: right;
+    text-transform: uppercase;
+}
+
+.datosPersonales{
+    width: 80%;
+}
+
+input{
+    width: 100%;
+}
+
+.inputPrecio{
+    width: 50%;
+}
+

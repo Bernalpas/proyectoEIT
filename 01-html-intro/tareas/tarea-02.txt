@@ -1,0 +1,5 @@
+
+
+1. Completar las barras de navegación de semántico y ventanas
+2. Utilizar los estilos vistos en cualquiera de las páginas anteriores
+3. Mostrar cuando el usuario hace clink en un elemento el documento de tareas 01 y 02

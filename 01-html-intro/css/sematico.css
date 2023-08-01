@@ -1,0 +1,55 @@
+/* 
+selector{
+    propiedad: valor;
+    propiedad: valor;
+}
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Fasthand&display=swap');
+
+/* configuramos el uso de la tipografía que descargamos */
+@font-face {
+    font-family: miTipografia;
+    src: url('../assets/fonts/Wallpoet-Regular.ttf');
+}
+
+/* selectores globales / tags */
+h2{
+    color: green;
+}
+
+/* selector de clase */
+.seccion{
+    background-color: rgb(169, 169, 208);
+}
+
+/* selector de id */
+/* no se recomienda reutilizarlo */
+#miParrafo {
+    color: red;
+}
+
+.miFont{
+    font-style: normal;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 45px;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.googleFonts{
+    font-family: 'Kablammo', cursive;
+}
+
+.conImport{
+    font-family: 'Fasthand', cursive;
+    font-size: 30px;
+}
+
+
+.conDescargaFont{
+    font-family: mitipografia;
+    font-size: 48px;
+}
+
