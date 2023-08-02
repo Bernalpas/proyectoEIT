@@ -1,4 +1,9 @@
 
+
+console.log('=========================================');
+console.log('======= Login - DOM ========');
+console.log('=========================================');
+
 /* 
 let user = document.getElementById('user').value;
 let password = document.getElementById('password').value;
@@ -34,7 +39,7 @@ function login() {
     alert('Usuario o contraseña incorrectos');
     }
 
-    
+    //4. Redireccionar a la pagina de admin o error
 }
 
 //login();
