@@ -65,15 +65,18 @@
     <div class="container">
         <form action="">
             <div class="mb-3">
-                <label for="exampleFormControlInput1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                <label for="user" class="form-label">User</label>
+                <input type="text" class="form-control" id="user" placeholder="Usuario">
             </div>
             <div class="mb-3">
-                <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password">
             </div>
-            <div class="text-center m-5">
-                <button type="button" class="btn btn-success w-50">Login</button>
+            <div class="text-center m-4">
+                <button onclick="login()" type="button" class="btn btn-success w-50">Login</button>
+            </div>
+            <div class="text-center m-4">
+                <button type="reset" class="btn btn-danger w-50">Borrar Datos</button>
             </div>
         </form>
     </div>
@@ -82,8 +85,8 @@
 
 
 
+    <script src="./login.js"></script>
     <!-- Link al CDN de js de Bootstrap  -->
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
         crossorigin="anonymous"></script>
