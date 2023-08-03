@@ -6,6 +6,8 @@ console.log('=========================================');
 
 let stockProductos = []
 
+let miBoton = document.getElementById('miBoton');
+
 const cargarProductos = () => {
 
     console.log('Cargando productos...');
@@ -25,6 +27,8 @@ const cargarProductos = () => {
 
     //4. Agregamos el producto al array de productos
     stockProductos.push(producto);
+
+    miBoton.style.display = 'revert';
 
 
 }
