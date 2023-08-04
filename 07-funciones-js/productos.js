@@ -8,6 +8,15 @@ let stockProductos = []
 
 let miBoton = document.getElementById('miBoton');
 
+let botonBuscar = document.getElementById('buscar').value;
+console.log(botonBuscar);
+
+function buscarProducto() {
+    console.log('Buscando producto...');
+    console.log(botonBuscar);
+} 
+
+
 const cargarProductos = () => {
 
     console.log('Cargando productos...');
@@ -44,3 +53,17 @@ const imprimirProductos = () => {
     }
 
 }
+
+console.log('=========================================');
+
+let enlaces = document.getElementsByTagName('a');
+console.log(enlaces);
+
+console.log(enlaces[4]);
+console.log(enlaces[4].href);
+
+console.log('=========================================');
+
+enlaces[4].removeAttribute('href')
+
+console.log(`El enlace nuevo es: ${enlaces[4].href}`);
