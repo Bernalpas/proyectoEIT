@@ -77,8 +77,25 @@ let parrafo = document.createElement('p')
 console.log(parrafo);
 
 parrafo.innerText = 'Este es un párrafo creado desde JS'
+//parrafo.style.color = 'blue';//dando estilos a ni elemento creado
+
 
 console.log(parrafo);
 
 let parrafo2 = document.getElementById('parrafo');
 parrafo2.innerHTML = parrafo.innerText;
+//parrafo.style.color = 'red'
+
+console.log('=========================================');
+
+let enlaces = document.getElementsByTagName('a');
+console.log(enlaces);
+
+console.log(enlaces[4]);
+console.log(enlaces[4].href);
+
+console.log('=========================================');
+
+enlaces[4].removeAttribute('href')
+
+console.log(`El enlace nuevo es: ${enlaces[4].href}`);

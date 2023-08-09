@@ -38,10 +38,10 @@
                         <a class="nav-link disabled" aria-disabled="true">Sucursales</a>
                     </li>
                 </ul>
-                <form class="d-flex">
+                <div class="d-flex">
                     <input id="buscar" type="text" class="form-control me-2" placeholder="Search">
                     <button class="btn btn-outline-success" type="button" onclick="buscarProducto()">Búsqueda</button>
-                </form>
+                </div>
             </div>
         </div>
     </nav>
@@ -73,11 +73,35 @@
 
     <div>
         <div class="text-center m-4">
-            <button onclick="imprimirProductos()" type="button" class="btn btn-warning w-75">Imprimir Productos</button>
+            <button type="button" class="btn btn-warning w-75" id="botonImprimir">
+                Imprimir Productos
+            </button>
         </div>
     </div>
-
+    
     <hr>
+    
+    
+    <div class="container">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Nombre Producto</th>
+                    <th>Precio Producto</th>
+                </tr>
+            </thead>
+            <tbody id="miTabla">
+
+            </tbody>
+            <tfoot id="pieDeTabla">
+
+            </tfoot>
+        </table>
+    </div>
+    
+
+
+    
 
     <div id="parrafo"></div>
 
