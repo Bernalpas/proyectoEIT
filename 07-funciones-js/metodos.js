@@ -99,3 +99,12 @@ console.log('=========================================');
 enlaces[4].removeAttribute('href')
 
 console.log(`El enlace nuevo es: ${enlaces[4].href}`);
+
+console.log('=========================================');
+
+
+let memoriaLocal = localStorage.getItem('Usuario');
+let memoriaLocalPass = localStorage.getItem('Password');
+
+console.log(memoriaLocal);
+console.log(memoriaLocalPass);

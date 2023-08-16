@@ -107,6 +107,21 @@ console.log(resultado);
 
 console.log('====================================');
 
+localStorage.removeItem('Usuario');
+localStorage.removeItem('Password');
+
+
+console.log('====================================');
+
+
+let misVentas = JSON.parse(localStorage.getItem('Productos'));
+
+console.log(misVentas);
+
+console.log(misVentas.length);
+
+
+
 
 
 

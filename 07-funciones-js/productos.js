@@ -4,7 +4,7 @@ console.log('=========================================');
 console.log('======= Cargamos Productos - DOM ========');
 console.log('=========================================');
 
-let stockProductos = ['pepas']
+let stockProductos = []
 
 let miBoton = document.getElementById('miBoton');
 
@@ -60,6 +60,44 @@ const cargarProductos = () => {
 
 }
 
+let otraCarga = document.getElementById('otraCarga');
+
+otraCarga.addEventListener('click', (e) => {
+
+    e.preventDefault();
+
+    console.log('Cargando productos...');
+
+    //1. Obtenemos los datos desde el DOM
+    let productoCargado = document.getElementById('producto').value;
+    let precioCargado = document.getElementById('precio').value;
+
+    //2. Creamos un objeto para guardar los datos
+    let producto = {
+        nombre: productoCargado,
+        precio: precioCargado
+    }
+
+    //3. Imprimimos de ejemplo el producto obtenido
+    console.log(producto);
+
+    if(productoCargado == '' && precioCargado == ''){
+        alert('Debe completar los campos');
+    }else{
+        //4. Agregamos el producto al array de productos
+        stockProductos.push(producto);
+
+        let productosString = JSON.stringify(stockProductos)
+
+        localStorage.setItem('Productos', productosString);
+
+        cargarTabla();
+    }
+
+    miBoton.style.display = 'revert';
+
+});
+
 
 const imprimirProductos = () => {
 
@@ -112,6 +150,7 @@ miBotonImprimir.addEventListener('click', (event) => {//index => i
     console.log(event);
 
     event.preventDefault();//evitar que sejecute la función por defecto del evento
+    
     console.log('Soy una función flecha');
 
     console.log('Imprimiendo productos...');
@@ -129,6 +168,7 @@ const cargarTabla = () =>{
 
     let miTabla = document.getElementById('miTabla');
 
+    miTabla.innerHTML = '';
     //creamos el row, la fila
     let fila = document.createElement('tr');
 
@@ -161,4 +201,7 @@ const cargarTabla = () =>{
 
 
 }
+
+
+
 

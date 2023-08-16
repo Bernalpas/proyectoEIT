@@ -25,6 +25,7 @@ function login() {
     console.log(user);
     console.log(password);
 
+
     //1. Validar que los campos no esten vacios
 
 
@@ -32,6 +33,10 @@ function login() {
 
 
     //3. Validar que el usuario y la contraseña sean correctos
+
+
+    localStorage.setItem('Usuario', user);
+    localStorage.setItem('Password', password);
 
     if (user == 'admin' && password == '1234') {
         alert('Bienvenido Administrador');
