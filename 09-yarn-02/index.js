@@ -51,5 +51,5 @@ PORT = 9000;
 
 
 server.listen(PORT, ()=>{
-    console.log(`Servidor escuchando en el puerto http://locahost:${PORT}`);
+    console.log(`Servidor escuchando en el puerto http://localhost:${PORT}`);
 });
