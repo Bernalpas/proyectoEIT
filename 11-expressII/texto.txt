@@ -1,0 +1,5 @@
+
+
+Buenas noches!!
+estamos leyendo los archivos 
+desde un texto.txt

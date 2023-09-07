@@ -1,0 +1,2 @@
+
+Soy un archivo de lectura asíncrona
