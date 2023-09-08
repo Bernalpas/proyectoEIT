@@ -21,7 +21,6 @@ app.use(express.urlencoded({ extended: true }));//mi app entiende formularios
 app.use(express.static(path.join(__dirname, 'public')));//mi app entiende archivos estaticos (css, js, img)
 
 
-
 //Propios
 app.use((req, res, next) => {
 
@@ -51,27 +50,49 @@ app.use((req, res, next) => {
     }
 })
 
-
-app.get('/home', (req, res)=>{
-    res.send(`<h1>Bienvenidos a la App</h1>`);
-});
-
 app.get('/', (req, res)=>{
     res.sendFile('index.html')
 });
 
-
-app.get('/formulario', controlJWT, (req,res)=>{
-    res.send(`<h1>Te enviamos el Formulario</h1>`);
+app.get('/home', (req, res)=>{
+    res.send(`<h1>Bienvenido/a a la App Administrador/a</h1>`);
 });
 
+/* 
+app.get('/error', (req, res)=>{
+    res.sendFile('error.html');
+}); 
+*/
+
+app.get('/login', controlJWT, (req,res)=>{
+    res.sendFile('login.html');
+});
+
+
 //POST
-app.post('/formulario', (req,res)=>{
+app.post('/login', (req,res)=>{
     
     console.log(req.body);
+    
+    let user = req.body.user;
+    let password = req.body.password;
+    
+    console.log(`Recibimos tus Datos y son: ${user} - ${password}`);
 
-    res.send(`<h1>Recibimos tus Datos</h1>`);
+    if(user == '' || password == ''){
+        res.redirect('/error.html');
+    }else if(user != 'admin' || password != '1234'){
+        res.redirect('/error.html');
+    }else{
+        res.redirect('/home');
+    }
 
+});
+
+app.get('/control', controlJWT, (req,res)=>{
+    res.json({
+        JSON: 'Ruta testeada'
+    });
 });
 
 
