@@ -7,7 +7,7 @@
     <!-- link de CSS de Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
-    <title>Error</title>
+    <title>Login</title>
 </head>
 
 <body>
@@ -33,16 +33,27 @@
         </div>
     </nav>
 
-    <div class="text-center m-5">
-        <h1>
-            Error
-        </h1>
-    </div>
+    <h1 class="m-5 text-center">
+        Formulario de Login
+    </h1>
 
-    <div class="text-center m-5">
-        <figure>
-            <img src="https://bigseo.com/wp-content/uploads/2018/03/error-404-foxplay.png" alt="error">
-        </figure>
+    <div class="container">
+        <form action="/usuario/login" method="post">
+            <div class="mb-3">
+                <label for="user" class="form-label">User</label>
+                <input type="text" class="form-control" id="user" name="user" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <div class="text-center m-4">
+                <button type="submit" class="btn btn-success w-50">Login</button>
+            </div>
+            <div class="text-center m-4">
+                <button type="reset" class="btn btn-danger w-50">Borrar Datos</button>
+            </div>
+        </form>
     </div>
 
 
