@@ -1,4 +1,9 @@
 
+
+const dotenv = require('dotenv');
+dotenv.config();
+
+
 //código de ejemplo de la documentación de mongodb
 
 const { MongoClient } = require('mongodb');
@@ -6,8 +11,8 @@ const { MongoClient } = require('mongodb');
 // import { MongoClient } from 'mongodb'
 
 // Connection URL
-const url = 'mongodb://127.0.0.1:27017';
-const client = new MongoClient(url);
+const Mongo_Url_Local = process.env.Mongo_Url_Local;
+const client = new MongoClient(Mongo_Url_Local);
 
 // Database Name
 const dbName = 'myProject';

@@ -7,14 +7,14 @@ dotenv.config();
 const MongoClient = require('mongodb').MongoClient;
 
 //creamos una url o path para la conexión local
-const mongoUrlLocal = process.env.MONGO_URL_LOCAL;
+const Mongo_Url_Local = process.env.Mongo_Url_Local;
 
 //crear una url o path para la conexión remota
-const mongoUrlAtlas = process.env.MONGO_URL_ATLAS;
+const Mongo_Url_Atlas = process.env.Mongo_Url_Atlas;
 
 //creación de una colleción en local
 //usamos el método de conexión de mongo client
-MongoClient.connect(mongoUrlLocal, (err, db) =>{ // use miwebeit
+MongoClient.connect(Mongo_Url_Local, (err, db) =>{ // use miwebeit
 
     //si hay un error lanzamos el error
     if(err) throw err;
