@@ -2,14 +2,9 @@
 //Creamos los controladores de mi App
 //creamos funciones para respondera las rutas
 
+//CRUD de Productos
 
-function listarProductos(req, res) {
-
-    res.send(`<h1>Te listamos los Producto</h1>`);
-
-}
-
-
+//1. Create (Crear / INSERT)
 const agregarProductos = (req,res) =>{
 
     console.log(req.body);
@@ -28,6 +23,16 @@ const agregarProductos = (req,res) =>{
 
 }
 
+
+//2. Read (Leer / FIND)
+function listarProductos(req, res) {
+
+    res.send(`<h1>Te listamos los Producto</h1>`);
+
+}
+
+
+//3. Update (Actualizar / UPDATE)
 const actualizarProductos = (req,res) =>{
     
     let producto = req.params.id;
@@ -38,6 +43,8 @@ const actualizarProductos = (req,res) =>{
 
 }
 
+
+//4. Delete (Eliminar / DELETE)
 const eliminarProductos = (req,res) =>{
 
     let producto = req.params.id;

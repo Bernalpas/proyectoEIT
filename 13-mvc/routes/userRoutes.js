@@ -54,3 +54,39 @@ router.delete('/delete/:id', (req,res)=>{
 //exportamos el modulo router
 module.exports = router;
 
+
+//Database MongoDB
+
+//Base de Datos: prueba
+//Coleccion: carpeta
+//usuarios
+
+//documento en Mongo
+/*
+{
+    "user": 'admin',
+    "password": '1234'
+},
+{
+    "user": 'admin',
+    "password": '1234'
+},
+{
+    "user": 'admin',
+    "password": '1234'
+},
+{
+    "user": 'admin',
+    "password": '1234'
+},
+{
+    "user": 'admin',
+    "password": '1234'
+}
+{
+    "user": 'admin',
+    "password": '1234'
+}
+*/
+
+

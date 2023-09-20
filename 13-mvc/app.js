@@ -9,6 +9,12 @@ const PORT = process.env.PORT || 8080;
 //importamos las rutas como un middelware
 const userRoutes = require('./routes/userRoutes.js');
 const productRouter = require('./routes/productRoutes.js');
+/*
+app.use(cors({
+    origin: '*',
+    origin: 'https://miweb.com'
+}));
+*/
 
 app.use(cors());
 app.use(express.json());

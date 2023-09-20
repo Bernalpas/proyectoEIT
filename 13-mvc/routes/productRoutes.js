@@ -8,6 +8,9 @@
 const express = require('express');
 const router = express.Router();
 
+//middleware
+const  { admin } = require('../middelwares/admin');
+
 // importamos la lógica de la app desde los controladores
 const {
     listarProductos,
@@ -21,7 +24,7 @@ router.get('/mostrar', listarProductos );
 
 router.post('/insert', agregarProductos);
 
-router.put('/update/:id', actualizarProductos)
+router.put('/update/:id', admin, actualizarProductos)
 
 router.delete('/delete/:id', eliminarProductos )
 
