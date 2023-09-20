@@ -7,15 +7,18 @@
 - los documentos son los datos que se guardan en la base de dato
 */
 
+const dotenv = require('dotenv');
+dotenv.config();
+
 
 //importamos el módulo de cliento de mongo para la conexión
 const MongoClient = require('mongodb').MongoClient;
 
 //creamos una url o path para la conexión local
-const mongoUrlLocal = 'mongodb://127.0.0.1:27017/miwebeit';
+const mongoUrlLocal = process.env.MONGO_URL_LOCAL;
 
 //crear una url o path para la conexión remota
-const mongoUrlAtlas = 'mongodb+srv://pastorbernal:nvj9HwuQh0FGQIaq@cluster0.btrbimd.mongodb.net/?retryWrites=true&w=majority';
+const mongoUrlAtlas = process.env.MONGO_URL_ATLAS;
 
 //usamos el método de conexión de mongo client
 MongoClient.connect(mongoUrlAtlas, (err, db) =>{ // use miwebeit

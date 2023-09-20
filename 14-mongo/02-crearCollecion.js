@@ -1,13 +1,16 @@
 
 
+const dotenv = require('dotenv');
+dotenv.config();
+
 //importamos el módulo de cliento de mongo para la conexión
 const MongoClient = require('mongodb').MongoClient;
 
 //creamos una url o path para la conexión local
-const mongoUrlLocal = 'mongodb://127.0.0.1:27017/';
+const mongoUrlLocal = process.env.MONGO_URL_LOCAL;
 
 //crear una url o path para la conexión remota
-const mongoUrlAtlas = 'mongodb+srv://pastorbernal:nvj9HwuQh0FGQIaq@cluster0.btrbimd.mongodb.net/?retryWrites=true&w=majority';
+const mongoUrlAtlas = process.env.MONGO_URL_ATLAS;
 
 //creación de una colleción en local
 //usamos el método de conexión de mongo client
