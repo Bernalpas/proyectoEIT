@@ -26,7 +26,8 @@ router.post('/login', (req,res)=>{
     }else if(user != 'admin' || password != '1234'){
         res.redirect('/error.html');
     }else{
-        res.redirect('/usuario/home');
+        //res.redirect('/usuario/home');
+        res.redirect('/productos.html');
     }
 
 });
