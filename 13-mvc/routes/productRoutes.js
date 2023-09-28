@@ -24,7 +24,7 @@ router.get('/mostrar', listarProductos );
 
 router.post('/insert', agregarProductos);
 
-router.put('/update/:id', admin, actualizarProductos)
+router.put('/update/:id', actualizarProductos)
 
 router.delete('/delete/:id', eliminarProductos )
 
