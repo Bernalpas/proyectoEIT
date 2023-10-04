@@ -4,26 +4,25 @@
 //Con una extensión convertimos en ES5 a ES6 
 //ES6 = module => configurar el package.js para el module
 //import express from 'express';
-
 const express = require('express');
 const path = require('path');
 const compression = require('compression');
 const morgan = require('morgan');
-const dotenv = require('dotenv');
 const cors = require('cors');
 const hbs = require('hbs');
-dotenv.config();
 const app = express();
-const PORT = process.env.PORT || 3000;
+const userRouter = require('./routers/userRouter');
 
 app.use(cors());
-app.use(morgan('combined'));
 app.use(morgan('dev'));
 app.use(compression());
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '/public')));
+
+//Rutas
+app.use('/user', userRouter);
 
 //Configuración de handlebars
 //1. Seteamos el motor de plantillas
