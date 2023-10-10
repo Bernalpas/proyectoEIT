@@ -6,11 +6,15 @@ const router = express.Router();
 const { check } = require('express-validator');
 const {
     userRegistro,
+    userLoginForm,
     userCreate,
+    userLogin
 
 } = require('../controllers/userControllers')
 
 router.get('/', userRegistro);
+
+router.get('/login', userLoginForm);
 
 router.post(
     '/',
@@ -20,6 +24,15 @@ router.post(
         check('password').isLength({min: 8}),
     ],
     userCreate
+);
+
+router.post(
+    '/login',
+    [
+        check('email').isEmail(),
+        check('password').isLength({min: 8}),
+    ],
+    userLogin
 );
 
 
