@@ -1,17 +1,17 @@
-const { validationResult } = require('express-validator');
-const bcrypt = require('bcrypt'); 
-const User = require('../models/userModel');
+import { validationResult } from 'express-validator';
+import bcrypt from 'bcrypt'; 
+import User from '../models/userModel.js';
 
 
-const userRegistro = (req, res) => {
+export const userRegistro = (req, res) => {
     res.render('registro');
 }
 
-const userLoginForm = (req, res) => {
+export const userLoginForm = (req, res) => {
     res.render('login');
 }
 
-const userCreate = async (req, res) => {
+export const userCreate = async (req, res) => {
 
     //1. Validación de datos recibidos
     const errores = validationResult(req)
@@ -66,7 +66,8 @@ const userCreate = async (req, res) => {
 
 };
 
-const userLogin = async (req, res) => {
+
+export const userLogin = async (req, res) => {
 
     const { email, password} = req.body;
 
@@ -101,7 +102,10 @@ const userLogin = async (req, res) => {
                 data: 'Login correcto'
             });
         }
-    
+
+        
+        
+        
     } catch (error) {
 
         return res.json({
@@ -112,9 +116,9 @@ const userLogin = async (req, res) => {
 
 }
 
-module.exports = {
+/* export {
     userRegistro,
     userLoginForm,
     userCreate,
     userLogin
-}
+} */
