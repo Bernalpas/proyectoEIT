@@ -1,0 +1,28 @@
+
+
+<h1 class=" text-center mt-5" id="titulo">
+    Formulario de Registro
+</h1>
+
+<div class="container">
+        <form action="/email" method="post">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" name="password" required>
+            </div>
+            <div class="text-center m-4">
+                <button type="submit" class="btn btn-primary w-50">Registrarse</button>
+            </div>
+            <div class="text-center m-4">
+                <button type="reset" class="btn btn-warning w-50">Borrar Datos</button>
+            </div>
+        </form>
+    </div>
