@@ -1,0 +1,36 @@
+
+<h1 class=" text-center mt-5">
+    Cargamos Productos
+</h1>
+
+
+<div class="container">
+        <form action="/cargarproductos" method="post">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" id="nombre" name="nombre" required>
+            </div>
+            <div class="mb-3">
+                <label for="precio" class="form-label">Precio</label>
+                <input type="number" class="form-control" id="precio" name="precio" required>
+            </div>
+            <div class="mb-3">
+                <label for="stock" class="form-label">Stock</label>
+                <input type="number" class="form-control" id="stock" name="stock" required>
+            </div>
+            <div class="mb-3">
+                <label for="imagen" class="form-label">Url</label>
+                <input type="file" class="form-control" id="imagen" name="imagen" required>
+            </div>
+            <div class="mb-3">
+                <label for="descripcion" class="form-label">Descripción</label>
+                <input type="text" class="form-control" id="descripcion" name="descripcion" required>
+            </div>
+            <div class="text-center m-4">
+                <button type="submit" class="btn btn-success w-50">Cargar Productos</button>
+            </div>
+            <div class="text-center m-4">
+                <button type="reset" class="btn btn-danger w-50">Borrar Datos</button>
+            </div>
+        </form>
+</div>

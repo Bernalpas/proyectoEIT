@@ -27,7 +27,8 @@ const envioMail = async (nombre, email) => {
         subject: 'Bienvenido a la App',
         html: `<h1>Hola ${nombre}, te damos la bienvenida</h1> <br>
         Estamos contententos de tenerte con nosotros y esperamos que disfrutes de nuestra app <br>
-        Estarás recibiendo todas las novedades en tu email: ${email} <br>`
+        Estarás recibiendo todas las novedades en tu email: ${email} <br>
+        <a href="https://loginmodulo-production.up.railway.app/" target="_blank">Visítanos</a> para conocer más sobre nosotros!`
     });
 
 }

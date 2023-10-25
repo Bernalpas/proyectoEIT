@@ -1,0 +1,20 @@
+<h1 class=" text-center mt-5">
+    Productos a la Venta
+</h1>
+
+<div class="container d-flex m-5">
+
+    {{#each productos}}
+
+        <div class="card m-3" style="width: 22rem;">
+            <img src={{imagen}} class="card-img-top" alt="producto para la venta">
+            <div class="card-body">
+                <h5 class="card-title">{{nombre}}</h5>
+                <p class="card-text">{{descripcion}}</p>
+                <a href="#" class="btn btn-primary">Ver Productos</a>
+            </div>
+        </div>
+
+    {{/each}}
+
+</div>
