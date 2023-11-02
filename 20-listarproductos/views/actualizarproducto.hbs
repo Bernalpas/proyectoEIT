@@ -1,0 +1,46 @@
+
+
+
+<h1 class="text-center mt-5" style="color: brown">
+    Actualizar Producto
+</h1>
+
+<div class="m-4">
+    {{ productoParaActualizar }}
+</div>
+
+<div class="m-4">
+    {{ id }}
+</div>
+
+
+<div class="container">
+        <form action="/actualizarProducto/{{ productoParaActualizar._id }}" method="post">
+            <div class="mb-3">
+                <label for="nombre" class="form-label">Nombre</label>
+                <input type="text" class="form-control" name="nombre" value={{ productoParaActualizar.nombre }}>
+            </div>
+            <div class="mb-3">
+                <label for="precio" class="form-label">Precio</label>
+                <input type="number" class="form-control" name="precio" value= {{ productoParaActualizar.precio }}>
+            </div>
+            <div class="mb-3">
+                <label for="stock" class="form-label">Stock</label>
+                <input type="number" class="form-control" name="stock" value= {{ productoParaActualizar.stock }}>
+            </div>
+            <div class="mb-3">
+                <label for="imagen" class="form-label">Url</label>
+                <input type="text" class="form-control" name="imagen" value= {{ productoParaActualizar.imagen }}>
+            </div>
+            <div class="mb-3">
+                <label for="descripcion" class="form-label">Descripción</label>
+                <input type="text" class="form-control" name="descripcion" value= {{ productoParaActualizar.descripcion }}>
+            </div>
+            <div class="text-center m-4">
+                <button type="submit" class="btn btn-outline-warning w-50">Actualizar Producto</button>
+            </div>
+            <div class="text-center m-4">
+                <button type="reset" class="btn btn-outline-dark w-50">Borrar Datos</button>
+            </div>
+        </form>
+</div>

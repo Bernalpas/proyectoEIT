@@ -9,9 +9,21 @@
         <div class="card m-3" style="width: 22rem;">
             <img src={{imagen}} class="card-img-top" alt="producto para la venta">
             <div class="card-body">
-                <h5 class="card-title">{{nombre}}</h5>
-                <p class="card-text">{{descripcion}}</p>
-                <a href="#" class="btn btn-primary">Ver Productos</a>
+                <h5 class="card-title">{{ nombre }}</h5>
+                <p class="card-text">{{ descripcion }}</p>
+                <a href="/mostrarproducto/{{_id}}" class="btn btn-primary">
+                    Ver Producto
+                </a>
+                <form action="/eliminar/{{ _id }}" method="post">
+                    <button class="btn btn-danger">
+                        Eliminar Producto
+                    </button>
+                </form>
+                <form action="/actualizar/{{ _id }}" method="post">
+                    <button class="btn btn-warning">
+                        Actualizar Producto
+                    </button>
+                </form>
             </div>
         </div>
 

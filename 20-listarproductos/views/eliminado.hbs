@@ -1,0 +1,35 @@
+
+
+
+
+<h1 class=" text-center mt-5" style="color: red;">
+    Producto Eliminado
+</h1>
+
+<div class="m-4">
+    {{ id }}
+</div>
+
+<div class="m-4">
+    {{ productoEliminado }}
+</div>
+
+
+<div class="card mb-3" style="max-width: 1200px; max-height:800px">
+    <div class="row g-0">
+        <div class="col-md-6">
+            <img src={{ productoEliminado.imagen }} class="img-fluid rounded-start" alt="Detalle del produto buscado">
+        </div>
+        <div class="col-md-6">
+            <div class="card-body">
+                <h2 class="card-title">{{ productoEliminado.nombre }}</h2>
+                <p class="card-text">{{ productoEliminado.descripcion }}</p>
+                <p class="card-text">
+                    <h3 class="text-body-secondary">
+                        Precio: {{ productoEliminado.precio }}
+                    </h3>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

@@ -25,8 +25,8 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
-
 //Ejercicio clase 24/10/2023
+//R: búsqueda de TODOS los datos
 app.get('/cargarproductos', (req, res) => {
   res.render('cargarproductos');
 });
@@ -49,9 +49,117 @@ app.get('/mostrarproductos', async (req, res) => {
     
   } catch (error) {
     console.log(error);
+    res.render('error');
   }
 
 })
+
+
+//R: Búsqueda por ID del producto
+app.get('/mostrarproducto/:_id', async (req, res) => {
+
+  const id = req.params._id;
+
+  console.log(id);
+
+  try {
+
+    const productoBuscado = await Producto.findById(id);
+
+    console.log(productoBuscado);
+    
+    return res.render('detalleproduc', {
+      id,
+      productoBuscado
+    })
+  
+  } catch (error) {
+    console.log(error);
+  }
+
+});
+
+
+//D: Borrar un Producto por el ID
+app.post('/eliminar/:_id', async (req, res) => {
+
+  const id = req.params._id;
+
+  console.log(id);
+
+  try {
+
+    const productoEliminado = await Producto.findByIdAndDelete(id);
+
+    console.log(productoEliminado);
+    
+    return res.render('eliminado', {
+      productoEliminado
+    })
+  
+  } catch (error) {
+    console.log(error);
+  }
+
+});
+
+//R: Búsqueda del Producto para Actualizar por ID
+app.post('/actualizar/:_id', async (req, res) => {
+
+  const id = req.params._id;
+
+  console.log(id);
+
+  try {
+
+    const productoParaActualizar = await Producto.findById(id);
+
+    console.log(productoParaActualizar);
+    
+    return res.render('actualizarproducto', {
+      productoParaActualizar,
+      id
+    })
+  
+  } catch (error) {
+    console.log(error);
+  }
+
+});
+
+app.post('/actualizarProducto/:_id', async (req, res) => {
+
+  /* const { nombre, precio, stock, imagen, descripcion } = req.body; */
+
+  const id = req.params._id;
+
+  console.log(`el id para actualizar es: ${id}`);
+  
+  try {
+    
+    const dato = req.body
+    
+    console.log(dato);
+
+    const producto = await Producto.findById(id);
+
+    console.log(producto);
+
+    const actualizar = await Producto.findByIdAndUpdate(id, dato, {new: true});
+
+    console.log(actualizar)
+    
+    return res.render('actualizado', { 
+      actualizar
+    });
+    
+  } catch (error) {
+    console.log(error);
+    res.render('error')
+  } 
+
+});
+
 
 app.post('/cargarproductos', async (req, res) => {
 
@@ -81,6 +189,7 @@ app.post('/cargarproductos', async (req, res) => {
 
 });
 
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));
@@ -96,6 +205,5 @@ app.use(function(err, req, res, next) {
   res.status(err.status || 500);
   res.render('error');
 });
-
 
 module.exports = app;
